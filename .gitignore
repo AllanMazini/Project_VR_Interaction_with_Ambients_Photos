@@ -60,3 +60,5 @@ sysinfo.txt
 crashlytics-build.properties
 
 *.meta
+.DS_Store
+.DS_Store
