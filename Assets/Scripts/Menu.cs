@@ -1,43 +1,28 @@
-﻿using System.Collections;
+﻿
+using System.Net.Mime;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
 
-    public GameObject pauseMenu;
-    private bool activePausedMenu;
-
-    private void Update()
+    public void SceneSala()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            activePausedMenu = !activePausedMenu;
-            pauseMenu.SetActive(activePausedMenu);
-        }
-
+        SceneManager.LoadScene(1);
+    }
+    
+    public void Home()
+    {
+        SceneManager.LoadScene(0);
     }
 
-    public void sala()
-    {
-        SceneManager.LoadScene(1);    
-    }
-
-
-    // public void activeOption(GameObject go)
-    // {
-    //     go.SetActive(true);
-    // }
-
-    // public void exitOption(GameObject go)
-    // {
-    //     go.SetActive(false);
-    // }
-
-    public void exitGame()
+    public void Exit()
     {
         Application.Quit();
     }
 
 }
+
+
